@@ -12,7 +12,7 @@ clock = pygame.time.Clock()
 
 x = 225
 y = 550
-ship_height = 90
+ship_height = 90 ###вторая попытка
 ship_width = 80
 bullets = []
 x_alien = 30
