@@ -12,7 +12,7 @@ clock = pygame.time.Clock()
 
 x = 225
 y = 550
-ship_height = 90 ###вторая попытка
+ship_height = 90
 ship_width = 80
 bullets = []
 x_alien = 30
@@ -32,6 +32,7 @@ class bulleti():
         self.win = screen
         pygame.draw.circle(self.win, self.color, (self.x, self.y), self.r)
 
+
 def draw_ammo(screen):
     font = pygame.font.Font(None, 100)
     font2 = pygame.font.Font(None, 25)
@@ -39,6 +40,7 @@ def draw_ammo(screen):
     text2 = font2.render("Патроны", True, (255, 0, 0))
     screen.blit(text, (500, 15))
     screen.blit(text2, (470, 5))
+
 
 def load_image(name, colorkey=None):
     fullname = os.path.join('data', name)
@@ -56,6 +58,7 @@ def load_image(name, colorkey=None):
     else:
         image = image.convert_alpha()
     return image
+
 
 background = load_image("bg.jpg")
 ship = load_image("spaceship.png")
@@ -87,7 +90,7 @@ while running:
             bullet.y -= bullet.vel
         else:
             bullets.pop(bullets.index(bullet))
-        print(bullet.y, bullet.x)
+        # print(bullet.y, bullet.x)
 
     for bullet in bullets:
         bullet.draw(screen)
