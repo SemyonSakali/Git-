@@ -368,9 +368,9 @@ menu_bestscore = load_image("bestscore.png")
 menu_bestscore = pygame.transform.scale(menu_bestscore, (200, 70))
 
 alien4 = load_image("boss.png", -1)
-alien1 = load_image("alien2.jpg", -1)
-alien2 = load_image("alien.jpg", -1)
-alien3 = load_image("alien3.jpg", -1)
+alien1 = load_image("alien2.png", -1)
+alien2 = load_image("alien.png", -1)
+alien3 = load_image("alien3.png", -1)
 alien5 = load_image("boss_kill.png")
 alien1 = pygame.transform.scale(alien1, (50, 50))
 alien2 = pygame.transform.scale(alien2, (50, 50))
@@ -504,8 +504,8 @@ while running:
         if event.type == pygame.MOUSEBUTTONDOWN and not stop_game:
             song1.play(0)
             # если меньше 5 пуль на экране, то добавляем
-            # print(x)
-            # print(y)
+            print(x)
+            print(y)
             if len(bullets) < 5:
                 bullets.append(bulleti(round(x + 80 // 2), round(y + 50 // 2),
                                        5, (255, 0, 0), 1))
