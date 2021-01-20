@@ -200,7 +200,7 @@ def is_cross(a, b):
         return False
 
 
-def terminate():  # выход
+def terminate():   # выход
     pygame.quit()
     sys.exit()
 
